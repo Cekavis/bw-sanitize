@@ -1,1 +1,10 @@
-/target/
+target/
+.DS_Store
+
+# Private Bitwarden working files.
+sanitized.json
+restored.json
+merged.json
+mapping.json
+merge-report.*
+merged-report.*

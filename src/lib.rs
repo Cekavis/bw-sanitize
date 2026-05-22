@@ -1,3 +1,5 @@
+mod analysis;
+
 use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
@@ -5,6 +7,12 @@ use std::path::Path;
 use anyhow::{Context, Result};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+
+pub use analysis::{
+    AnalysisSummary, AnalyzeOptions, MergeAnalysis, MergeApplyOptions, MergeApplyReport,
+    MergeCandidate, PasswordConflict, PasswordVariant, ReportItem, ReviewGroup,
+    analysis_to_markdown, analyze_merge_candidates, apply_recommended_merges,
+};
 
 const TOKEN_PREFIX: &str = "__BW_MAP_";
 const TOKEN_SUFFIX: &str = "__";
